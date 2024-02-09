@@ -1,6 +1,6 @@
 import numpy as np
 import nibabel as nib
-from scipy.ndimage.interpolation import zoom
+from scipy.ndimage import zoom
 from os.path import join
 from os import listdir
 import multiprocessing
