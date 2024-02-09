@@ -201,7 +201,7 @@ if __name__ == '__main__':
     if load_num == 0:
         for m in net.modules():
             if isinstance(m, (nn.Conv3d)):
-                nn.init.orthogonal(m.weight)
+                nn.init.orthogonal_(m.weight)
     else:
         net.load_state_dict(torch.load(model_save_path + '/net_%d.pkl' % load_num))
         load_num = load_num + 1
