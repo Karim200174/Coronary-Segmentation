@@ -1,4 +1,4 @@
-from scipy.ndimage.interpolation import zoom
+from scipy.ndimage import zoom
 import torch
 import argparse
 import os
