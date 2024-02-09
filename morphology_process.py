@@ -1,6 +1,6 @@
 import nibabel as nib
 import pandas as pd
-from scipy.ndimage.interpolation import zoom
+from scipy.ndimage import zoom
 import os
 from utils.utils import get_csv_split
 import multiprocessing
