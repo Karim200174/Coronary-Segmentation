@@ -1,7 +1,7 @@
 from torch.utils.data import DataLoader, Dataset
 import numpy as np
 import nibabel as nib
-from scipy.ndimage.interpolation import zoom
+from scipy.ndimage import zoom
 import os
 import pandas as pd
 from monai.transforms import RandFlip, RandRotate
@@ -31,7 +31,7 @@ class CoronaryImage(Dataset):
         ID = image_index
 
         img_nii = nib.load(image_path)
-        img = img_nii.get_data()
+        img = img_nii.get_fdata()
         label_nii = nib.load(label_path)
         label = label_nii.get_data()
         img_size = np.array(img.shape)
